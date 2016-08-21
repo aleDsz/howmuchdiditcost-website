@@ -1,0 +1,23 @@
+{
+  "name": "HowMuchDidItCost-website",
+  "version": "1.0.0",
+  "author": "Alexandre de Souza <alexandre@aledsz.com.br>",
+  "scripts": {
+    "test": "grunt test",
+    "start": "http-server ./src -o"
+  },
+  "license": "MIT",
+  "repository": {
+  	"type": "git",
+	"url": "https://github.com/aleDsz/howmuchdiditcost-website.git"
+  },
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "grunt": ">=0.4.0 <1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-html-test": "^0.1.6",
+    "grunt-js-test": "^1.5.12"
+  }
+}

@@ -1,6 +1,8 @@
 language: node_js
 
 before_script:
+  - 'nvm install node'
+  - 'npm install npm'
   - 'npm install -g grunt-cli'
 
 after_script:

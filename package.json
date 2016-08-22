@@ -14,13 +14,13 @@
   "dependencies": {
     "angular": "^1.5.8",
     "http-server": "^0.9.0",
-    "jquery": "^3.1.0",
-    "semantic-ui": "^2.2.2"
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "grunt": ">=0.4.0 <1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-html-test": "^0.1.6",
-    "grunt-js-test": "^1.5.12"
+	"grunt-js-test": "^1.5.12",
+    "semantic-ui": "^2.2.2"
   }
 }

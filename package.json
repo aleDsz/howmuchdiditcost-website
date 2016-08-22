@@ -20,7 +20,6 @@
     "grunt": ">=0.4.0 <1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-html-test": "^0.1.6",
-	"grunt-js-test": "^1.5.12",
-    "semantic-ui": "^2.2.2"
+	"grunt-js-test": "^1.5.12"
   }
 }

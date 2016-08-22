@@ -1,10 +1,11 @@
 language: node_js
-node js:
-  - '0.40'
+
 before script:
+  - 'npm install -g grunt-cli'
   - 'npm install'
-  - 'npm start'
+
 after script:
   - 'npm test'
+
 notifications:
-  - slack: rarsystems:BSwsdqvNGJzwGurttLTDYGyF
+  - slack: rarsystems:BSwsdqvNGJzwGurttLTDYGyF#projects

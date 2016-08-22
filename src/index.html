@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="HMDITC">
+	<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>How Much Did It Cost - Início</title>
+			<script src="lib/jquery.js"></script>
+			<script src="lib/semantic.js"></script>
+			<script src="lib/angular.js"></script>
+			<script src="css/components/visibility.js"></script>
+			<script src="css/components/sidebar.js"></script>
+			<script src="css/components/transition.js"></script>
+  			<script src="app/configs.js"></script>
+  			<script src="app/main.js"></script>
+			<!-- Semantic CSS core -->
+			<link class="themable" rel="stylesheet" type="text/css" href="css/semantic.css">
+			<!-- Github theme -->
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/reset.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/site.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/container.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/grid.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/header.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/image.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/menu.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/divider.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/dropdown.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/segment.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/button.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/list.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/icon.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/sidebar.css">
+			<link class="themable" rel="stylesheet" type="text/css" href="css/components/transition.css">
+			<!-- Custom CSS -->
+			<link class="themable" rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		
+		<div class="pusher">
+			
+			<div class="ui primary inverted vertical masthead center aligned segment">
+			
+				<!-- Menu -->
+				<div class="ui container">
+					<div class="ui large secondary inverted pointing menu">
+						<a class="toc item">
+							<i class="sidebar icon"></i>
+						</a>
+						<a class="active item">Início</a>
+						<a class="item">Nossa proposta</a>
+						<a href="./dashboard" class="item">Dashboard</a>
+						<a href="./api" class="item">API</a>
+						<a class="item">Sobre</a>
+						<a class="item">Contato</a>
+					</div>
+				</div>
+
+				<!-- Sidebar -->
+				<div class="ui vertical inverted sidebar menu">
+					<a class="active item">Início</a>
+					<a class="item">Nossa proposta</a>
+					<a href="./dashboard" class="item">Dashboard</a>
+					<a href="./api" class="item">API</a>
+					<a class="item">Sobre</a>
+					<a class="item">Contato</a>
+				</div>
+				
+				<!-- Header -->
+				<div class="ui text container">
+					<h1 class="ui inverted header">How Much Did It Cost?</h1>
+					<h2>Veja nossa solução para controle de despesas sua e/ou de sua empresa.</h2>
+					<div class="ui huge primary button">Iniciar tour <i class="right arrow icon"></i></div>
+				</div>
+
+			</div>
+
+			<div class="ui secondary inverted vertical masthead center aligned segment">
+
+				<!-- Nossa proposta -->
+				<div class="ui text container">
+					<h1 class="ui inverted header">Nossa proposta</h1>
+					<h2 class="ui super-h2">
+						<p>
+							A nossa ideia é trazer uma maior comodidade para que os nossos clientes tenham uma facilidade maior
+							em gerenciar os gastos, seja estes pessoais ou empresariais.
+						</p>
+						<p>
+							Por meio da nossa solução, é possível realizar uma análise de ganhos e gastos e obter uma previsão de quanto de capital
+							estará disponível para uso livre, levando em conta o gasto médio diário (GMD) e os gastos automáticos e gastos agendados.
+						</p>
+					</h2>
+				</div>
+
+			</div>
+			
+			<div class="ui third inverted vertical masthead center aligned segment">
+
+				<!-- Sobre -->
+				<div class="ui text container">
+					<h1 class="ui inverted header">Sobre</h1>
+					<h2 class="ui super-h2">
+						<p>
+							<b>“How Much Dit It Cost”</b> foi criado por <a class="ui link" href="https://github.com/aleDsz/" target="_blank">Alexandre de Souza</a>, com o propósito de auxiliar a todos os jovens
+							que precisam reduzir todos os custos para sobreviverem no mundo contemporâneo, dando-os oportunidade de estudar, se alimentar, se locomover e, quando
+							possível, sair para alguma festa ou ir à algum evento.
+						</p>
+						<p>
+							Mas, ao desenvolver a sua ideia, ele percebeu que muitas empresas poderiam se beneficiar deste serviço, auxiliando-as na hora de realizar tomadas de decisões
+							na hora de analisar todas as entradas e saídas de capital na empresa.
+						</p>
+					</h2>
+				</div>
+
+			</div>
+
+			<div class="ui last inverted vertical masthead center aligned segment footer">
+
+				<!-- Contato -->
+				<div class="ui text container">
+					<h1 class="ui inverted header">Contato</h1>
+					<h2 class="ui super-h2">
+						<p>Para entrar em contato conosco, você pode utilizar o formulário abaixo:</p>
+						<div class="ui form left aligned">
+
+							<div class="field">
+								<div class="ui corner labeled input">
+									<input type="text" ng-Model="Contato.Nome" placeholder="Nome" required>
+									<div class="ui corner label">
+										<i class="asterisk icon"></i>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="ui corner labeled input">
+									<input type="email" ng-Model="Contato.Email" placeholder="E-mail" required>
+									<div class="ui corner label">
+										<i class="asterisk icon"></i>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<div class="ui corner labeled input">
+									<textarea ng-Model="Contato.Mensagem" placeholder="Mensagem" required></textarea>
+									<div class="ui corner label">
+										<i class="asterisk icon"></i>
+									</div>
+								</div>
+							</div>
+
+							<div class="field">
+								<button id="enviarEmail" class="ui huge primary button"><i class="mail icon"></i> Enviar</button>
+							</div>
+
+						</div>
+					</h2>
+				</div>
+
+			</div>
+
+			<div class="ui primary inverted vertical masthead center aligned segment">
+
+				<!-- Footer -->
+				<div class="ui text container">
+					<h1 class="ui inverted header">How Much Did It Cost?</h1>
+					<h2>Aqui o seu gasto se torna lucro</h2>
+				</div>
+
+				</div>
+			
+			</div>
+
+		</div>
+
+	</body>
+</html>

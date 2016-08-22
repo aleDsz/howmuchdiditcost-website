@@ -1,12 +1,11 @@
 language: node_js
+node_js:
+  - '0.4'
 
-before script:
-  - 'sudo npm install -g grunt-cli'
+before_script:
+  - 'npm install -g grunt-cli'
 
-install:
-  - 'npm install'
-
-after script:
+after_script:
   - 'npm test'
 
 notifications:

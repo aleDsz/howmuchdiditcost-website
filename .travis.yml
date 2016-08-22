@@ -1,7 +1,7 @@
 language: node_js
 
 before script:
-  - 'npm install -g grunt-cli'
+  - 'sudo npm install -g grunt-cli'
   - 'npm install'
 
 after script:

@@ -1,6 +1,4 @@
 language: node_js
-os: linux
-sudo: require
 
 install:
   - 'nvm install node'
@@ -11,12 +9,8 @@ install:
 script:
   - 'npm test'
 
-before_deploy:
-  - 'sudo apt-get -qq update'
-  - 'sudo apt-get install lftp'
-
-deploy:
-  - 'lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.aledsz.com.br; set ssl:verify-certificate no; mirror -R -n ./src/ /hmditc/"'
+after_success:
+  - 'find src -type f -exec curl -u $FTP_USER:$FTP_PASSWORD --ftp-create-dirs -T {} ftp://ftp.alesdz.com.br/hmditc/{} \;'
 
 notifications:
   slack: 

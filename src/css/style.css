@@ -19,8 +19,12 @@ body {
 	background: #903749;
 }
 
-.ui.third.inverted.segment {
-	background: #A84545;
+.ui.tertiary.inverted.segment {
+	background: #2D4059;
+}
+
+.ui.quaternary.inverted.segment {
+	background: #423737;
 }
 
 .ui.last.inverted.segment {
@@ -50,7 +54,7 @@ body {
 }
 
 .ui.link {
-	color: #2B2E4A;
+	color: #4FC3F7;
 	text-decoration: underline;
 }
 

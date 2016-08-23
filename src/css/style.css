@@ -49,13 +49,33 @@ body {
 	border: none;
 }
 
-.ui.inverted.menu {
+.ui.inverted.sidebar.menu {
 	background: #903749;
 }
 
+/**
+ * Custom CSS
+ */
 .ui.link {
 	color: #4FC3F7;
 	text-decoration: underline;
+}
+
+.ui.unlink {
+	color: white;
+	text-decoration: none;
+}
+
+.ui.inverted.menu.fixed {
+	visibility: hidden;
+	background: rgba(27, 28, 29, 0.7);
+	border-radius: 0;
+	line-height: 30px;
+}
+
+.ui.inverted.menu.fixed > .item {
+	border: none;
+	line-height: 30px;
 }
 
 /**
@@ -138,9 +158,6 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-	.ui.fixed.menu {
-		display: none !important;
-	}
 	.secondary.pointing.menu .item,
 	.secondary.pointing.menu .menu {
 		display: none;

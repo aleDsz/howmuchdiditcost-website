@@ -1,13 +1,9 @@
 language: node_js
-
-addons:
-  apt:
-    packages:
-     - lftp
-
 os: linux
 
 install:
+  - 'sudo apt-get -qq update'
+  - 'sudo apt-get install lftp'
   - 'nvm install node'
   - 'npm install npm'
   - 'npm install -g grunt-cli'
@@ -20,7 +16,7 @@ deploy:
   - 'lftp -c "open -u $FTP_USER,$FTP_PASSWORD ftp.aledsz.com.br; set ssl:verify-certificate no; mirror -R -n ./src/ /hmditc/"'
 
 notifications:
-  - slack:
+  slack: 
     rooms:
       - rarsystems:BSwsdqvNGJzwGurttLTDYGyF#projects
     on_success: always

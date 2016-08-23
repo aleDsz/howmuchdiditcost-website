@@ -1,12 +1,19 @@
 language: node_js
 
-before_script:
+install:
   - 'nvm install node'
   - 'npm install npm'
   - 'npm install -g grunt-cli'
 
-after_script:
+script:
   - 'npm test'
 
+after_success:
+  - 'wput ./src/ ftp://$FTP_USER:$FTP_PASSWORD@aledsz.com.br/hmditc/'
+
 notifications:
-  - slack: rarsystems:BSwsdqvNGJzwGurttLTDYGyF#projects
+  - slack:
+    rooms:
+      - rarsystems:BSwsdqvNGJzwGurttLTDYGyF#projects
+    on_success: always
+    on_failure: always

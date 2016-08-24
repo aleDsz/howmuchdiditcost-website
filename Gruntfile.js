@@ -7,7 +7,14 @@ module.exports = function(grunt) {
 			}
 		},
 		jshint: {
-			all: ['Gruntfile.js', 'src/app/main.js', 'src/app/configs.js']	
+			all: [
+				'Gruntfile.js',
+				'src/app/main.js',
+				'src/app/configs.js',
+				'src/app/services/mail.js',
+				'src/app/services/api.js',
+				'src/app/controllers/front.js'
+			]	
 		}
 	});
 

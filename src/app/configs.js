@@ -23,7 +23,9 @@ $(document).ready(function() {
 		$('.ui.sidebar').sidebar('toggle');
 	});
 
-	/* $('#enviarEmail').click(function() {
-		$('#enviarEmail').addClass('loading');
-	}); */
+	$('.message').hide();
+
+	$('.message .close').on('click', function() {
+		$(this).closest('.message').transition('fade');
+	});
 });

@@ -10,8 +10,15 @@
 			<script src="css/components/visibility.js"></script>
 			<script src="css/components/sidebar.js"></script>
 			<script src="css/components/transition.js"></script>
+
+			<!-- App -->
   			<script src="app/configs.js"></script>
   			<script src="app/main.js"></script>
+			<!-- Services -->
+  			<script src="app/services/mail.js"></script>
+			<!-- Controllers -->
+  			<script src="app/controllers/front.js"></script>
+
 			<!-- Semantic CSS core -->
 			<link class="themable" rel="stylesheet" type="text/css" href="css/semantic.css">
 			<!-- Github theme -->
@@ -33,7 +40,7 @@
 			<!-- Custom CSS -->
 			<link class="themable" rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
-	<body>
+	<body ng-controller="FrontController">
 		
 		<div class="pusher">
 			
@@ -47,10 +54,12 @@
 						</a>
 						<a href="#inicio" class="scrolly item">Início</a>
 						<a href="#nossaProposta" class="scrolly item">Nossa proposta</a>
-						<a href="./dashboard" class="item">Dashboard</a>
-						<a href="./api" class="item">API</a>
 						<a href="#sobre" class="scrolly item">Sobre</a>
 						<a href="#contato" class="scrolly item">Contato</a>
+						<div class="right menu">
+							<a href="./dashboard" class="ui inverted button">Dashboard</a>
+							<a href="./api" class="ui inverted button">API</a>
+						</div>
 					</div>
 				</div>
 
@@ -62,10 +71,12 @@
 						</a>
 						<a href="#inicio" class="scrolly item">Início</a>
 						<a href="#nossaProposta" class="scrolly item">Nossa proposta</a>
-						<a href="./dashboard" class="item">Dashboard</a>
-						<a href="./api" class="item">API</a>
 						<a href="#sobre" class="scrolly item">Sobre</a>
 						<a href="#contato" class="scrolly item">Contato</a>
+						<div class="right menu">
+							<a href="./dashboard" class="item">Dashboard</a>
+							<a href="./api" class="item">API</a>
+						</div>
 					</div>
 				</div>
 
@@ -73,10 +84,10 @@
 				<div class="ui vertical inverted sidebar menu">
 					<a href="#inicio" class="scrolly item">Início</a>
 					<a href="#nossaProposta" class="scrolly item">Nossa proposta</a>
-					<a href="./dashboard" class="item">Dashboard</a>
-					<a href="./api" class="item">API</a>
 					<a href="#sobre" class="scrolly item">Sobre</a>
 					<a href="#contato" class="scrolly item">Contato</a>
+					<a href="./dashboard" class="item">Dashboard</a>
+					<a href="./api" class="item">API</a>
 				</div>
 				
 				<!-- Header -->
@@ -104,27 +115,25 @@
 								obter uma previsão de quanto de capital	estará disponível para uso livre, levando em conta o
 								gasto médio diário (GMD) e os gastos automáticos e gastos agendados.
 							</p>
-							<div class="ui divider"></div>
-							<div class="ui three column very relaxed stackable grid">
+							<div class="ui three column very relaxed stackable grid grid-alpha">
 								<div class="column">
-									<i class="big line chart icon"></i>
-									<h3><b>Análise de Despesas</b></h3>
+									<h4><b><i class="green line chart icon"></i> Análise de Despesas</b></h4>
 									<h4>
 										 Obter dados importantes para a sua economia e, consequentemente, em suas tomadas de decisões
 										 na hora de gastar o seu dinheiro.
 									</h4>
 								</div>
+								<div class="ui vertical divider white">E</div>
 								<div class="column">
-									<i class="big options icon"></i>
-									<h3><b>Implementação</b></h3>
+									<h4><b><i class="blue options icon"></i> Implementação</b></h4>
 									<h4>
 										É possível utilizar o nosso produto em seu ERP, através de nossa <a href="./api" target"_blank" class="ui link">API</a>,
 										com bibliotecas para diversas linguagem de programação para que possamos nos adequar ao seu modelo de negócio.
 									</h4>
 								</div>
+								<div class="ui vertical divider white">E</div>
 								<div class="column">
-									<i class="big hashtag icon"></i>
-									<h3><b>Comodidade</b></h3>
+									<h4><b><i class="orange hashtag icon"></i> Comodidade</b></h4>
 									<h4>
 										Com a possibilidade de automatizar as entradas e saídas monetárias, você também pode importar outras aplicações
 										para que possamos realizar a análise de dados com maior precisão.
@@ -167,7 +176,14 @@
 						<h1 class="ui inverted header">Contato</h1>
 						<h2 class="ui super-h2">
 							<p>Para entrar em contato conosco, você pode utilizar o formulário abaixo:</p>
+							
 							<div class="ui form left aligned">
+
+								<div class="ui negative message">
+									<i class="close icon"></i>
+									<div class="header">Ocorreu um erro!</div>
+									<p class="msg"></p>
+								</div>
 
 								<div class="field">
 									<div class="ui corner labeled input">
@@ -197,7 +213,7 @@
 								</div>
 
 								<div class="field">
-									<button id="enviarEmail" class="ui huge primary button"><i class="mail icon"></i> Enviar</button>
+									<button id="enviarEmail" class="ui huge primary button" ng-Click="sendEmail()"><i class="mail icon"></i> Enviar</button>
 								</div>
 
 							</div>

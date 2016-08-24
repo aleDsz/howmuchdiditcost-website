@@ -73,9 +73,22 @@ body {
 	line-height: 30px;
 }
 
-.ui.inverted.menu.fixed > .item {
+.ui.inverted.menu.fixed > .item,
+.ui.inverted.menu.fixed > .button,
+.right.menu > .item,
+.right.menu > .button {
 	border: none;
 	line-height: 30px;
+}
+
+.grid-alpha {
+	border-radius: 1em;
+	background: rgba(27, 28, 29, 0.2);
+	position: relative;
+}
+
+.ui.vertical.divider.white {
+	color: white;
 }
 
 /**

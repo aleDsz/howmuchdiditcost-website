@@ -13,6 +13,7 @@ body {
  */
 .ui.primary.inverted.segment {
 	background: #2B2E4A;
+	height: 100vh;
 }
 
 .ui.secondary.inverted.segment {
@@ -29,6 +30,7 @@ body {
 
 .ui.last.inverted.segment {
 	background: #B83B5E;
+	height: 100vh;
 }
 
 .ui.primary.buttons .button,
